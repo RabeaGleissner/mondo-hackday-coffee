@@ -18,3 +18,7 @@ $( document ).ready(function() {
     console.log( "error" );}
     )
 });
+
+//$("#menu > #keys1,#keys2,#keys3").function(){
+//
+//}

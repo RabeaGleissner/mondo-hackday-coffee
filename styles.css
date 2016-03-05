@@ -1,5 +1,72 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    /*float: left;*/
+    display: inline;
+}
+
+li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+#menu{
+    background-color: #869ba3;
+    padding: 10px 0;
+}
+
+#menu a:hover:not(.active){
+    background-color: #536271;
+}
+
+
+.active {
+    background-color:#869ba3;
+}
+
+
+input{
+    background-color: #ffab9a;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*input[fname]{*/
+    /*background-color: yellow;*/
+/*}*/
 body {
-  color: red;
+    font-family: sans-serif;
+    color: navy;
+    text-align: center;
+}
+
+.spend{
+    padding-top: 100px;
+    background-color: white;
+    width:100%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+}
+
+.bkgimg{
+    background-image: url('coffee.ico');
+    height:300px;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
 }
 
 #graph{
