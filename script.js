@@ -36,7 +36,6 @@ $( document ).ready(function() {
 
 });
 
-
 function calculateAmount(apiData) {
     var result = 0;
 
@@ -45,4 +44,3 @@ function calculateAmount(apiData) {
     }
     return result;
 }
-
