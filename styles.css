@@ -92,8 +92,8 @@ body {
 .coffee-container{
    transform: translate(-50%, -50%);
    position: absolute;
-   top: 25%;
-   left: 60%;
+   top: 85%;
+   left: 50%;
 }
 
 p.budget-used {
