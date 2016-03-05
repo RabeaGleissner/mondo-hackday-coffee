@@ -68,23 +68,82 @@ body {
     background-attachment: initial;
     background-position: center;
 }
-
+/*
 #graph{
-	 padding-top: 10px;
-	}
+ padding-top: 10px;*/
 
-/* "path" without a dot in front, otherwise the graph will not render correctly! */
+ /* "path" without a dot in front, otherwise the graph will not render correctly! */
+/*
+ path { 
+     stroke: steelblue;
+     stroke-width: 2;
+     fill: none;
+ }
 
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
+ .axis path,
+ .axis line {
+     fill: none; 
+     stroke: grey;
+     stroke-width: 1;
+     shape-rendering: crispEdges;
+ }     
+}
+*/
+.coffee-container{
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 85%;
+   left: 50%;
 }
 
-.axis path,
-.axis line {
-    fill: none; 
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
+p.budget-used {
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 50%;
+   left: 49%;
+   font-size: 40px;
+   color: #fff;
+   text-shadow: -1px -1px 0 #A31919, -1px 1px 0 #7b0000, 1px -1px 0 #7b0000, 1px 1px 0 #7b0000;
+}
+
+/* ANIMATE LIQUID FILL */
+.liquid {
+   transform: translateX(100%);
+   transform: translateY(100%);
+   opacity: 0.8;
+   animation: fill 3.2s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+   0%{
+      opacity: 0.5;
+      transform: translateY(100%);
+   }
+   100%{
+      transform: translateY(20%);
+      opacity: 1;
+   }
+}
+
+/* ANIMATE STEAM */
+.steam {
+   stroke: #F7F7F7;
+   stroke-width: 1.5px;
+   stroke-dasharray: 200;
+   stroke-dashoffset: 200;
+   opacity: 0.2;
+   animation: steamAnimate 2.5s;
+   animation-delay: 3.3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes steamAnimate{
+    0%{
+        stroke-dashoffset: 200;
+    }
+      
+    100%{
+        stroke-dashoffset: 0;
+    }
 }
