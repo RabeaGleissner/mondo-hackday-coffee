@@ -1,3 +1,23 @@
 body {
   color: red;
 }
+
+#graph{
+	 padding-top: 10px;
+	}
+
+/* "path" without a dot in front, otherwise the graph will not render correctly! */
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none; 
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
