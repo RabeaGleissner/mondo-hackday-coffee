@@ -6,10 +6,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello!</h1>
+<h1>Hello!</h1>
+<ul id="menu">
+  <li><a href="#logo">MY COFFEE SPEND</a></li>
+  <li><a href="#myspend">MY SPEND</a></li>
+  <li><a href="#transhist">TRANSACTION HISTORY</a></li>
+</ul>
+<div class="spend">
+  <img src="coffee.ico">
+  <h3>SET BUDGET</h3>
+  <form action="spend.asp">
+    <input type="text" name="fname" placeholder="My Budget...">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
-  <p id="graph"></p>
-  
+<div class="transaction">
+  <h2>TRANSACTION HISTORY</h2>
+  <div class="graph"></div>
+  <!-- <form action="spend.asp">
+   <input type="text" name="fmoney" placeholder="from">
+    <input type="text" name="fmoney" placeholder="to">-->
+  <p>FROM</p>
+  <select>
+    <option value="jan">January</option>
+    <option value="feb">February</option>
+    <option value="mar">March</option>
+  </select>
+  <br>
+  <input type="submit" value="Submit">
+  </form>
+</div>
+
+<p id="graph"></p>
+
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -17,4 +48,5 @@
 
 <script src="script.js"></script>
 <script src="graph.js"></script>
+
 </html>
