@@ -1,3 +1,4 @@
+var apiData;
 $( document ).ready(function() {
   var mondoData = $.ajax({
     type: "GET",
@@ -13,12 +14,33 @@ $( document ).ready(function() {
         return false;
       })
       console.log(result);
+      calculateAmount(result);
+      var budget;
+      $("#submit-button").on("click", function() {
+          budget = $("#budget").val();
+          console.log(result)
+          var spentAmount = calculateAmount(result);
+      console.log(spentAmount)
+          if (calculateAmount(result) >= budget) {
+              $('#budget-message').text('You have overspent your budget!')
+
+          } else {
+              $('#budget-message').text('You can have more coffee!')
+          }
+      });
     }
     ).fail(function() {
     console.log( "error" );}
     )
+
+
 });
 
-//$("#menu > #keys1,#keys2,#keys3").function(){
-//
-//}
+function calculateAmount(apiData) {
+    var result = 0;
+
+    for(var i = 0; i < apiData.length; i++) {
+        result -= apiData[i].local_amount
+    }
+    return result;
+}
