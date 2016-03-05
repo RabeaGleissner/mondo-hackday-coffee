@@ -9,12 +9,12 @@ $( document ).ready(function() {
        },
        url: "https://staging-api.getmondo.co.uk/transactions?expand[]=merchant&account_id=acc_000095qofBZ93NkAfWYqK9" })
       .done(function() {
-          alert( "success" );
+            console.log( "success" );
         })
   .fail(function() {
-      alert( "error" );
+      console.log( "error" );
     })
     .always(function() {
-        alert( "complete" );
+        console.log( "complete" );
       });
 });
